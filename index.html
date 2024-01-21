@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./css/style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap" rel="stylesheet">
+        <script src="./js/index.js"></script>
+        <title>DivanFucker Radio Web</title>
+    </head>
+    <body>
+        <section class="wrapper">
+            <div class="player" id="player-section">
+                <div class="header">Now Playing</div>
+                <div class="cover">
+                    <img class="image" id="cover-image">
+                    <canvas id="cover-canvas" style="display: none;"></canvas>
+                </div>
+                <div class="song-info">
+                    <div class="header song-name" id="song-name">There's nothing</div>
+                    <div class="header subheader song-author" id="song-author">To see</div>
+                </div>
+                <div class="progress-cotainer" id="progressbar">
+                    <div class="progressbar">
+                        <div class="fill" id="progressbar-filled"/>
+                    </div>
+                    <div class="time-container">
+                        <span class="time current" id="current-time">0:00</span>
+                        <span class="time total" id="total-time">0:00</span>
+                    </div>
+                </div></div>
+                <div class="controls">
+                    <button class="btn previous" id="previous-button"><img class="play-pausebtn" src="./assets/img/previous.svg"></button>
+                    <button class="btn play-pause" id="play-button"><img class="play-pausebtn" id="play-pause" src="./assets/img/play.svg"></button>
+                    <button class="btn next" id="next-button"><img class="play-pausebtn" src="./assets/img/next.svg"></button>
+                </div>
+                <div class="volume-progressbar-container" id="volume-progressbar">
+                    <p class="header">Volume</p>
+                    <div class="progressbar">
+                        <div class="fill" id="volume-progressbar-filled"/>
+                    </div>
+                    <span class="time" id="volume-value">100%</span>
+                </div>
+                <audio id="audio-source">
+                    <source id="audio-file">
+                    Your browser does not support the audio element.
+                </audio>
+                <canvas class="equaliszer-canvas" id="visualizer" width="600" height="100"></canvas>
+            </div>
+        </section>
+    </body>
+</html>
